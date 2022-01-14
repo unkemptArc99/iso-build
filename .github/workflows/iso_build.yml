@@ -24,9 +24,9 @@ jobs:
     needs: [prepare-release]
     strategy:
       matrix:
-        EDITION: [gnome]
-        BRANCH: [stable]
-        SCOPE: [full]
+        EDITION: [xfce, kde, gnome]
+        BRANCH: [stable, unstable]
+        SCOPE: [minimal, full]
     steps:
       - 
         uses: styfle/cancel-workflow-action@0.9.0
